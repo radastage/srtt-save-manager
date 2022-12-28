@@ -10,6 +10,23 @@ Disclaimer
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
+#############
+Questions No One Asked Yet:
+#############
+
+
+Q: What does this .bat do?
+A: It has three main functions at the moment: Load Character by name, Save Character by name, Open Save Folder. It was made to simulate the process of renaming save files, making it semi-automatic.
+
+Q: Maybe you should try getting a job?
+A: Why are you locked in the bathroom?
+
+Q: Oh no it doesn't work / I've found a bug!
+A: Contact me.
+
+Q: Do you want to credit somebody for giving you an idea to making this?
+A: In fact, I do. It was inspired by WSabey's PHP script on Saints Row Mods forum. Since I lack the competence of running PHP, I've made a similar program entirely in one .bat file.
+
 
 #############
 Installation:
