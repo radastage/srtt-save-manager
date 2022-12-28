@@ -31,6 +31,10 @@ Q: Do you want to credit somebody for giving you an idea to making this?
 
 A: In fact, I do. It was inspired by WSabey's PHP script on Saints Row Mods forum. Since I lack the competence of running PHP, I've made a similar program entirely in one .bat file.
 
+Q: Can it edit the save files, giving me money or marking missions complete or etc?
+
+A: No. There are other programs to do that.
+
 
 #############
 Installation:
