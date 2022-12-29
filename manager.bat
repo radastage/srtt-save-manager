@@ -28,7 +28,6 @@ goto :load
 goto :save
 ) ELSE if %input% == 3 (
 dir /A:D /B
-pause>nul
 goto :menu
 ) ELSE if %input% == 4 (
 goto :desc
@@ -50,7 +49,6 @@ echo No description.txt found.
 copy /Y "%filename%\sr3save_00.sr3s_pc" "%cd%" >nul
 copy /Y "%filename%\savedir.sr3d_pc" "%cd%" >nul
 echo+"%filename% loaded."
-pause>nul
 goto :menu
 
 :save
@@ -64,7 +62,6 @@ mkdir "%filename%"
 copy /Y sr3save_00.sr3s_pc "%filename%" >nul
 copy /Y savedir.sr3d_pc "%filename%" >nul
 echo+"%filename% saved."
-pause>nul
 goto :menu
 
 :desc
@@ -79,7 +76,6 @@ mkdir "%filename%" >nul
 echo+%filename%>description.txt
 move /Y "description.txt" "%cd%\%filename%\" >nul
 notepad "%filename%\description.txt"
-pause>nul
 goto :menu
 
 :expl
