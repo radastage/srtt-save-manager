@@ -9,6 +9,7 @@ echo \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 set filename=
 
 :menu
+set /A randomseed = "%random% * %random%"
 echo 1 = [36mLoad Character[0m
 echo 2 = [32mSave Character[0m
 echo 3 = [37mCharacter List[0m
@@ -59,6 +60,8 @@ type "%filename%\description.txt"
 echo No description.txt found.
 )
 mkdir "%filename%"
+ren "%filename%\sr3save_00.sr3s_pc" "sr3save_00.sr3s_pc.%randomseed%.bak" >nul
+ren "%filename%\savedir.sr3d_pc" "savedir.sr3d_pc.%randomseed%.bak" >nul
 copy /Y sr3save_00.sr3s_pc "%filename%" >nul
 copy /Y savedir.sr3d_pc "%filename%" >nul
 echo+"%filename% saved."
