@@ -15,30 +15,23 @@ echo 2 = [32mSave Character[0m
 echo 3 = [37mCharacter List[0m
 echo 4 = [34mEdit Description[0m
 echo 5 = [36mOpen Save Folder[0m
-echo 6 = [31mQuit[0m
+echo 6 = [31mDelete Character[0m
+echo 7 = [37mRename Character[0m
+echo 8 = [31mQuit[0m
 
 
 set /P input=
 goto :main
 
 :main
-if %input% == 1 (
-goto :load
-
-) ELSE if %input% == 2 (
-goto :save
-) ELSE if %input% == 3 (
-dir /A:D /B
-goto :menu
-) ELSE if %input% == 4 (
-goto :desc
-)
-) ELSE if %input% == 5 (
-goto :expl
-)
-) ELSE if %input% == 6 (
-goto :eof
-)
+if /i %input% == 1 goto :load
+if /i %input% == 2 goto :save
+if /i %input% == 3 goto :list
+if /i %input% == 4 goto :desc
+if /i %input% == 5 goto :expl
+if /i %input% == 6 goto :delet
+if /i %input% == 7 goto :renam
+if /i %input% == 8 goto :eof
 
 :load
 SET /P "filename=Enter character name:"
@@ -81,6 +74,29 @@ move /Y "description.txt" "%cd%\%filename%\" >nul
 notepad "%filename%\description.txt"
 goto :menu
 
+:delet
+SET /P "filename=Enter character name: "
+if exist "%filename%\description.txt" (
+type "%filename%\description.txt"
+) ELSE (
+echo No description.txt found.
+)
+echo "Do you want to delete %filename%? (Y/N)"
+del "%filename%" >nul
+rd /S /Q "%filename%" >nul
+echo+"%filename% deleted."
+goto :menu
+
 :expl
 explorer %cd%
+goto :menu
+
+:renam
+SET /P "filename=Enter character name: "
+SET /P "filename2=Enter new character name: " 
+ren "%filename%" "%filename2%" >nul
+goto :menu
+
+:list
+dir /A:D /B
 goto :menu
